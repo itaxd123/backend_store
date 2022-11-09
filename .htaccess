@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine on
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !(.*)/$
+    RewriteRule (.*) http://backend_store.pe/$1/ [R=301,L,QSA]
+
+    Rewriterule ^(.+)/(.+)/(.+)/$ ?controlador=$1&accion=$2&id=$3 [L]
+    Rewriterule ^(.+)/(.+)/$ ?controlador=$1&accion=$2 [L]
+    RewriteRule ^(.+)/$ ?controlador=$1 [L]
+
+</IfModule>
