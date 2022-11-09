@@ -1,6 +1,5 @@
 <?php
 require_once 'model/categoria.php';
-
 class CategoriaController{
 
     private $model;
@@ -8,7 +7,6 @@ class CategoriaController{
     public function __construct(){
         $this->model = new categoria();
     }
-
 
     public function getAll(){
         $data = $this->model->getAllCategories();
@@ -22,5 +20,3 @@ class CategoriaController{
         echo json_encode($data);
     }
 }
-
-?>

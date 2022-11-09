@@ -1,53 +1,41 @@
 <?php
-class categoria{
+class categoria
+{
 
-    private $pdo;
-
-    public $id;
-    public $nombre;
-    public $estado;
+	private $pdo;
+	public $id;
+	public $nombre;
+	public $estado;
 
 	public function __construct()
-    {
-		try{
+	{
+		try {
 			$this->pdo = Database::Conectar();
-		}
-		catch(Exception $e){
+		} catch (Exception $e) {
 			die($e->getMessage());
 		}
 	}
 
-    public function getAllCategories()
+	public function getAllCategories()
 	{
-		try{
+		try {
 			$stm = $this->pdo->prepare("SELECT * FROM category");
 			$stm->execute();
 
 			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-		catch(Exception $e){
+		} catch (Exception $e) {
 			die($e->getMessage());
 		}
 	}
-    public function getProductForCategory($id)
+	public function getProductForCategory($id)
 	{
-		try
-		{
+		try {
 			$stm = $this->pdo->prepare("SELECT * FROM product WHERE category = $id");
 			// $stm->execute($id);
 			$stm->execute();
 			return $stm->fetchAll(PDO::FETCH_OBJ);
-		} catch (Exception $e)
-		{
+		} catch (Exception $e) {
 			die($e->getMessage());
 		}
 	}
-
-
-
-
-
 }
-
-
-?>
