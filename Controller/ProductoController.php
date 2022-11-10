@@ -19,12 +19,14 @@ class ProductoController
 
     public function getAll()
     {
+        header('Content-Type: application/json');
         $data = $this->model->Listar();
         echo json_encode($data);
     }
     public function findProduct()
     {
-        extract($_POST);
+        header('Content-Type: application/json');
+        extract($_GET);
         $data = $this->model->find($text);
         echo json_encode($data);
     }

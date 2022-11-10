@@ -9,13 +9,15 @@ class CategoriaController{
     }
 
     public function getAll(){
+        header('Content-Type: application/json');
         $data = $this->model->getAllCategories();
         echo json_encode($data);
 
     }
 
     public function getProductforCategory(){
-        extract($_POST);
+        header('Content-Type: application/json');
+        extract($_GET);
         $data = $this->model->getProductForCategory($id);
         echo json_encode($data);
     }
