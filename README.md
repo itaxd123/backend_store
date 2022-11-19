@@ -24,7 +24,7 @@ _Al descargar los 2 juntos puedes levantar el proyecto, cabe mencionar que la BD
 
 ## Funcionalidad 
 
-GET Obtener todos los Productos
+### GET Obtener todos los Productos
 
 Parametros: 
 ```
@@ -41,7 +41,7 @@ Responde:
 ![image](https://user-images.githubusercontent.com/29291465/201018521-c20967d7-ff46-46dc-8222-d7795d4cfe58.png)
 
 
-GET Buscar productos
+###  GET Buscar productos
 
 Parametros:
 ```
@@ -62,7 +62,7 @@ Responde:
 
 Categoria
 
-GET Obtener Categorias
+### GET Obtener Categorias
 
 Parametros
 ```
@@ -79,7 +79,7 @@ Respuesta:
 ![image](https://user-images.githubusercontent.com/29291465/201018982-eb261686-5f3b-43f0-aff8-13984a753b60.png)
 
 
-GET Obtener Producto por Categoria
+### GET Obtener Producto por Categoria
 
 Parametros
 ```
